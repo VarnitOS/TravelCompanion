@@ -39,12 +39,21 @@ class SupabaseService {
     private let client: SupabaseClient
     
     private init() {
-        // Replace with your Supabase URL and anon key
-        // In a production app, these should be stored in a secure configuration file or environment variables
+        // TODO: Replace these placeholder values with your actual Supabase credentials
+        // 1. Go to your Supabase project dashboard: https://app.supabase.com
+        // 2. Click on "Settings" in the sidebar, then "API"
+        // 3. Copy the URL under "Project URL"
+        // 4. Copy the "anon" public key under "Project API Keys"
         client = SupabaseClient(
             supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,
             supabaseKey: "YOUR_SUPABASE_ANON_KEY"
         )
+        
+        // After updating with real values, it should look like:
+        // client = SupabaseClient(
+        //     supabaseURL: URL(string: "https://abcdefghijklm.supabase.co")!,
+        //     supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        // )
     }
     
     // MARK: - Auth Methods
